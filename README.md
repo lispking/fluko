@@ -1,4 +1,4 @@
-# FluxusMeme - Intelligent Meme Token Generation Platform
+# Fluko - Intelligent Meme Token Generation Platform
 
 An intelligent Meme token generation and analysis platform based on Fluxus Stream Processing Engine and Sui blockchain.
 
