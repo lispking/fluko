@@ -1,6 +1,7 @@
 # Build output
 build/
 contracts/build/
+.next/
 
 # IDE files
 .idea/

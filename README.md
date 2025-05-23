@@ -10,6 +10,12 @@ An intelligent Meme token generation and analysis platform based on Fluxus Strea
 │   │   ├── meme_token.move    # Meme Token Contract
 │   │   └── meme_generator.move # Token Generator Contract
 │   └── Move.toml        # Move Package Configuration
+├── frontend/           # Next.js Frontend Application
+│   ├── src/            # Source Code
+│   │   ├── app/        # Next.js Pages
+│   │   ├── components/ # React Components
+│   │   └── utils/      # Utility Functions
+│   └── public/         # Static Assets
 └── README.md
 ```
 
@@ -31,7 +37,48 @@ Implements data-driven token generation features:
 - Calculate optimal token parameters
 - Query generator information
 
-## Deployment Guide
+## Frontend Development
+
+### Prerequisites
+
+- Node.js 18.x or later
+- npm or yarn package manager
+- Sui Wallet browser extension
+
+### Setup Frontend
+
+1. Install dependencies
+```bash
+cd frontend
+npm install
+# or
+yarn install
+```
+
+2. Configure environment variables
+```bash
+cp .env.example .env.local
+```
+Update the environment variables in `.env.local` with your configuration.
+
+3. Start development server
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+### Build for Production
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+## Smart Contract Deployment
 
 1. Install Sui CLI
 ```bash
@@ -49,39 +96,23 @@ sui move build
 sui client publish
 ```
 
-## Usage
+## Features
 
-1. Create Meme Token Generator
-```bash
-sui client call --function create_generator --module meme_generator --package $PACKAGE_ID --args "Fluko" "Fluko Meme Token"
-```
-
-2. Update Analytics Data
-```bash
-sui client call --function update_analytics --module meme_generator --package $PACKAGE_ID --args $GENERATOR_ID 80 70 90
-```
-
-3. Mint Tokens
-```bash
-sui client call --function mint --module meme_token --package $PACKAGE_ID --args $TREASURY_CAP 1000000000 $RECIPIENT
-```
+- Real-time analytics integration
+- Meme token generation based on market trends
+- Interactive dashboard for token management
+- Secure wallet integration
+- Analytics-driven token parameters
+- Community engagement metrics
 
 ## Contributing
 
-Issues and Pull Requests are welcome!
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## License
 
-Apache License 2.0
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+This project is licensed under the MIT License - see the LICENSE file for details.
