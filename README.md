@@ -1,6 +1,6 @@
-# Fluko - Intelligent Meme Token Generation Platform
+# Fluko - AI-Powered Meme Token Generation Platform
 
-An intelligent Meme token generation and analysis platform based on Fluxus Stream Processing Engine and Sui blockchain.
+A next-generation meme token generation and analysis platform powered by AI and built on the Sui blockchain.
 
 ## Project Structure
 
@@ -10,9 +10,9 @@ An intelligent Meme token generation and analysis platform based on Fluxus Strea
 │   │   ├── meme_token.move    # Meme Token Contract
 │   │   └── meme_generator.move # Token Generator Contract
 │   └── Move.toml        # Move Package Configuration
-├── frontend/           # Next.js Frontend Application
+├── frontend/           # Next.js Frontend Application with NextUI
 │   ├── src/            # Source Code
-│   │   ├── app/        # Next.js Pages
+│   │   ├── app/        # Next.js App Router Pages
 │   │   ├── components/ # React Components
 │   │   └── utils/      # Utility Functions
 │   └── public/         # Static Assets
@@ -23,26 +23,26 @@ An intelligent Meme token generation and analysis platform based on Fluxus Strea
 
 ### Meme Token Contract (meme_token.move)
 
-Implements basic token functionalities:
-- Token initialization
-- Minting functionality
-- Batch minting
-- Token burning
+Implements enhanced token functionalities:
+- Token initialization with metadata
+- Advanced minting mechanisms
+- Batch minting with analytics
+- Token burning with market impact analysis
 
 ### Meme Generator Contract (meme_generator.move)
 
-Implements data-driven token generation features:
-- Create token generator
-- Update analytics data
-- Calculate optimal token parameters
-- Query generator information
+Implements AI-driven token generation features:
+- Create customizable token generators
+- Real-time analytics integration
+- Market trend analysis
+- Performance metrics tracking
 
 ## Frontend Development
 
 ### Prerequisites
 
 - Node.js 18.x or later
-- npm or yarn package manager
+- pnpm package manager
 - Sui Wallet browser extension
 
 ### Setup Frontend
@@ -50,9 +50,7 @@ Implements data-driven token generation features:
 1. Install dependencies
 ```bash
 cd frontend
-npm install
-# or
-yarn install
+pnpm install
 ```
 
 2. Configure environment variables
@@ -63,9 +61,7 @@ Update the environment variables in `.env.local` with your configuration.
 
 3. Start development server
 ```bash
-npm run dev
-# or
-yarn dev
+pnpm dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
@@ -73,9 +69,7 @@ yarn dev
 ### Build for Production
 
 ```bash
-npm run build
-# or
-yarn build
+pnpm build
 ```
 
 ## Smart Contract Deployment
@@ -98,12 +92,13 @@ sui client publish
 
 ## Features
 
-- Real-time analytics integration
-- Meme token generation based on market trends
-- Interactive dashboard for token management
+- AI-powered token generation
+- Real-time market analytics
+- Trend-based parameter optimization
+- Interactive modern UI with NextUI
 - Secure wallet integration
-- Analytics-driven token parameters
 - Community engagement metrics
+- Performance analytics dashboard
 
 ## Contributing
 
@@ -115,4 +110,4 @@ sui client publish
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the Apache License 2.0 - see the LICENSE file for details.
